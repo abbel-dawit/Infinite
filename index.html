@@ -1,0 +1,1376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Infinite Icon Technology | IT Consultancy in the UAE and Africa</title>
+<meta name="description" content="Infinite Icon Technology is a Dubai headquartered IT consultancy delivering corporate training and digital transformation across the UAE and Africa, under an ISO 9001:2015 certified quality management system.">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0E1F2B;
+    --ink-2:#132A38;
+    --sand:#C89B5C;
+    --sand-light:#E4C793;
+    --teal:#1F8A82;
+    --teal-light:#3FB3A8;
+    --paper:#F2ECDE;
+    --paper-2:#EAE2CE;
+    --charcoal:#16232B;
+    --muted:#5B6B72;
+    --white:#FFFFFF;
+    --line:rgba(14,31,43,0.12);
+    --line-dark:rgba(228,199,147,0.22);
+    --radius:2px;
+    --max:1180px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--charcoal);
+    font-family:'Inter', sans-serif;
+    -webkit-font-smoothing:antialiased;
+    line-height:1.6;
+  }
+  h1,h2,h3,h4,h5{
+    font-family:'Space Grotesk', sans-serif;
+    margin:0;
+    letter-spacing:-0.01em;
+    line-height:1.2;
+    color:var(--ink);
+  }
+  .mono{
+    font-family:'IBM Plex Mono', monospace;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+  }
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 28px;}
+  section{position:relative;}
+  ::selection{background:var(--sand);color:var(--ink);}
+
+  /* ---------- focus ---------- */
+  a:focus-visible, button:focus-visible{
+    outline:2px solid var(--teal);
+    outline-offset:3px;
+  }
+
+  /* ---------- NAV ---------- */
+  header{
+    position:sticky;top:0;z-index:100;
+    background:rgba(242,236,222,0.88);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:16px 28px;max-width:var(--max);margin:0 auto;
+  }
+  .brand{display:flex;align-items:center;gap:12px;}
+  .brand-mark{width:34px;height:34px;flex:none;}
+  .brand-text{display:flex;flex-direction:column;line-height:1.1;}
+  .brand-text .name{font-family:'Space Grotesk';font-weight:700;font-size:15px;letter-spacing:0.01em;color:var(--ink);}
+  .brand-text .sub{font-family:'IBM Plex Mono';font-size:9px;letter-spacing:0.18em;color:var(--sand);text-transform:uppercase;margin-top:2px;}
+  nav.links{display:flex;gap:24px;align-items:center;}
+  nav.links a:not(.nav-cta){
+    font-size:14px;font-weight:500;color:var(--ink);position:relative;padding:4px 0;
+  }
+  nav.links a:not(.nav-cta)::after{
+    content:"";position:absolute;left:0;bottom:0;height:1px;width:0;background:var(--teal);transition:width .25s ease;
+  }
+  nav.links a:not(.nav-cta):hover::after{width:100%;}
+  a.nav-cta{
+    background:var(--ink);color:var(--paper)!important;
+    padding:13px 26px;font-size:13.5px;font-weight:600;letter-spacing:0.01em;
+    border-radius:6px;border:1px solid var(--ink);
+    display:inline-flex;align-items:center;line-height:1;box-sizing:border-box;
+    transition:background .2s ease, border-color .2s ease, color .2s ease;
+  }
+  a.nav-cta:hover{background:var(--teal);border-color:var(--teal);}
+  .burger{display:none;background:none;border:none;cursor:pointer;padding:6px;}
+  .burger span{display:block;width:22px;height:2px;background:var(--ink);margin:5px 0;transition:.25s;}
+  .mobile-panel{display:none;flex-direction:column;gap:2px;padding:0 28px 20px;background:var(--paper);border-bottom:1px solid var(--line);}
+  .mobile-panel a{padding:12px 0;font-size:15px;font-weight:500;border-bottom:1px solid var(--line);}
+  .mobile-panel a.nav-cta{
+    margin-top:14px;justify-content:center;border-bottom:none;padding:14px 22px;border-radius:6px;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    background:radial-gradient(ellipse at 15% 20%, var(--ink-2), var(--ink) 60%);
+    color:var(--paper);
+    overflow:hidden;
+    padding:96px 0 0;
+  }
+  .hero-grid{
+    display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center;
+    max-width:var(--max);margin:0 auto;padding:0 28px 60px;
+  }
+  .eyebrow{
+    font-family:'IBM Plex Mono';font-size:12px;letter-spacing:0.2em;text-transform:uppercase;
+    color:var(--sand-light);display:flex;align-items:center;gap:10px;margin-bottom:22px;
+  }
+  .eyebrow .dot{width:6px;height:6px;background:var(--teal-light);border-radius:50%;box-shadow:0 0 0 4px rgba(63,179,168,0.18);}
+  .hero h1{
+    font-size:clamp(34px,5vw,58px);color:var(--paper);font-weight:700;line-height:1.06;
+    max-width:640px;
+  }
+  .hero h1 em{font-style:normal;color:var(--sand-light);}
+  .hero p.lead{
+    margin-top:22px;font-size:17px;color:rgba(242,236,222,0.72);max-width:480px;
+  }
+  .hero-ctas{display:flex;gap:16px;margin-top:34px;flex-wrap:wrap;}
+  .btn-primary{
+    background:var(--sand);color:var(--ink);font-weight:600;font-size:14.5px;
+    padding:15px 26px;border-radius:var(--radius);display:inline-block;transition:.2s;
+  }
+  .btn-primary:hover{background:var(--sand-light);}
+  .btn-ghost{
+    border:1px solid rgba(242,236,222,0.35);color:var(--paper);font-weight:500;font-size:14.5px;
+    padding:14px 24px;border-radius:var(--radius);display:inline-block;transition:.2s;
+  }
+  .btn-ghost:hover{border-color:var(--sand-light);color:var(--sand-light);}
+  .hero-stats{
+    display:flex;gap:34px;margin-top:56px;padding-top:26px;border-top:1px solid rgba(242,236,222,0.14);
+    flex-wrap:wrap;
+  }
+  .hero-stats div b{display:block;font-family:'Space Grotesk';font-size:24px;color:var(--paper);}
+  .hero-stats div span{font-size:12px;color:rgba(242,236,222,0.55);}
+
+  .hero-art{position:relative;height:420px;}
+  .hero-art svg{width:100%;height:100%;}
+  .node-label{font-family:'IBM Plex Mono';font-size:9.5px;fill:rgba(242,236,222,0.68);letter-spacing:0.05em;}
+  .node-label.hub{fill:var(--sand-light);font-size:10.5px;}
+  .route-line{
+    fill:none;stroke:url(#lineGrad);stroke-width:1.1;stroke-dasharray:5 6;
+    animation:dash 22s linear infinite;
+  }
+  @keyframes dash{to{stroke-dashoffset:-400;}}
+  .pulse{animation:pulse 2.6s ease-in-out infinite;}
+  @keyframes pulse{
+    0%,100%{opacity:.55;r:3.2;}
+    50%{opacity:1;r:4.6;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .route-line{animation:none;}
+    .pulse{animation:none;}
+  }
+
+  /* ---------- SECTOR STRIP ---------- */
+  .strip{
+    background:var(--ink);border-top:1px solid rgba(242,236,222,0.1);
+    padding:22px 0;overflow:hidden;
+  }
+  .strip .track{
+    display:flex;gap:56px;white-space:nowrap;font-family:'IBM Plex Mono';
+    font-size:12.5px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(242,236,222,0.5);
+    animation:scroll 32s linear infinite;
+  }
+  .strip .track span{color:var(--sand-light);}
+  @keyframes scroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+  @media (prefers-reduced-motion: reduce){.strip .track{animation:none;overflow-x:auto;}}
+  @media (max-width:720px){
+    .strip .track{animation-duration:14s;gap:38px;}
+  }
+
+  /* ---------- SECTION SHELL ---------- */
+  .section{padding:84px 0;}
+  .section.tight{padding:72px 0;}
+  .section-head{max-width:640px;margin-bottom:44px;}
+  .section-head .eyebrow{color:var(--teal);}
+  .section-head .eyebrow .dot{background:var(--teal);box-shadow:0 0 0 4px rgba(31,138,130,0.14);}
+  .section-head h2{font-size:clamp(28px,3.4vw,40px);line-height:1.14;}
+  .section-head p{margin-top:14px;color:var(--muted);font-size:16px;max-width:560px;}
+  .on-dark .section-head h2{color:var(--paper);}
+  .on-dark .section-head p{color:rgba(242,236,222,0.65);}
+
+  /* ---------- ABOUT ---------- */
+  .about-grid{display:grid;grid-template-columns:0.95fr 1.05fr;gap:56px;align-items:start;}
+  .about-copy p{color:var(--muted);font-size:16px;margin:0 0 16px;}
+  .about-copy p:last-child{margin-bottom:0;}
+  .pillars{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--line);}
+  .pillar{
+    display:grid;grid-template-columns:64px 1fr;gap:20px;padding:26px 0;border-bottom:1px solid var(--line);
+  }
+  .pillar .num{font-family:'IBM Plex Mono';color:var(--sand);font-size:13px;padding-top:3px;}
+  .pillar h4{font-size:17px;margin-bottom:6px;}
+  .pillar p{margin:0;color:var(--muted);font-size:14.5px;}
+
+  /* ---------- SERVICES ---------- */
+  .pillars-two{
+    display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);
+  }
+  .pillar-block{background:var(--paper);padding:40px 38px 44px;}
+  .pillar-block-head{margin-bottom:22px;padding-bottom:26px;border-bottom:1px solid var(--line);}
+  .pillar-block-head .service-icon{width:36px;height:36px;color:var(--teal);margin-bottom:16px;display:block;}
+  .service-tag{
+    font-family:'IBM Plex Mono';font-size:10.5px;letter-spacing:0.1em;text-transform:uppercase;color:var(--sand);
+  }
+  .pillar-block-head h3{font-size:24px;margin:8px 0 10px;}
+  .pillar-block-head p{color:var(--muted);font-size:14.5px;margin:0;}
+  .sub-service-list{display:flex;flex-direction:column;}
+  .sub-service{display:flex;gap:16px;padding:18px 0;border-bottom:1px solid var(--line);}
+  .sub-service:last-child{border-bottom:none;}
+  .sub-service svg{flex:none;width:24px;height:24px;color:var(--sand);margin-top:2px;}
+  .sub-service h4{font-size:15.5px;margin:0 0 5px;color:var(--ink);font-family:'Space Grotesk';}
+  .sub-service p{margin:0;font-size:13.5px;color:var(--muted);line-height:1.55;}
+  .training-locations{margin-top:28px;padding-top:24px;border-top:1px solid var(--line);}
+  .locations-label{
+    font-family:'IBM Plex Mono';font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--sand);
+    display:block;margin-bottom:12px;
+  }
+
+  /* ---------- APPROACH ---------- */
+  .approach{background:var(--ink);color:var(--paper);}
+  .approach-list{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line-dark);}
+  .approach-item{padding:34px 26px 0;border-right:1px solid var(--line-dark);position:relative;}
+  .approach-item:last-child{border-right:none;}
+  .approach-item .step{font-family:'IBM Plex Mono';color:var(--sand-light);font-size:12px;margin-bottom:16px;display:block;}
+  .approach-item h4{color:var(--paper);font-size:17px;margin-bottom:10px;}
+  .approach-item p{color:rgba(242,236,222,0.6);font-size:14px;margin:0;}
+
+  /* ---------- COVERAGE ---------- */
+  .coverage-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+  .region-card{
+    background:var(--white);border:1px solid var(--line);padding:30px 28px;border-radius:var(--radius);
+  }
+  .region-card + .region-card{margin-top:18px;}
+  .region-card .rtitle{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;}
+  .region-card h4{font-size:18px;}
+  .region-card .count{font-family:'IBM Plex Mono';font-size:12px;color:var(--sand);}
+  .region-card p{color:var(--muted);font-size:14.5px;margin:0;}
+  .country-list{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px;}
+  .country-list span{
+    font-family:'IBM Plex Mono';font-size:11px;letter-spacing:0.04em;color:var(--charcoal);
+    background:var(--paper-2);padding:5px 10px;border-radius:20px;
+  }
+
+  /* ---------- SECTORS ---------- */
+  .sector-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+  .sector-item{
+    border:1px solid var(--line);padding:22px 18px;text-align:left;background:var(--white);
+    transition:.2s;
+  }
+  .sector-item:hover{border-color:var(--teal);}
+  .sector-item h5{font-size:14.5px;font-weight:600;color:var(--ink);margin:0 0 4px;}
+  .sector-item span{font-size:12.5px;color:var(--muted);}
+
+  /* ---------- GALLERY ---------- */
+  .gallery-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:250px;gap:14px;
+  }
+  .gallery-item{
+    position:relative;overflow:hidden;border-radius:3px;cursor:zoom-in;background:var(--ink);
+  }
+  .gallery-item img{
+    width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease;
+  }
+  .gallery-item:hover img{transform:scale(1.06);}
+  .gallery-caption{
+    position:absolute;left:0;right:0;bottom:0;padding:14px 16px;
+    background:linear-gradient(to top, rgba(14,31,43,0.88), transparent);
+    color:var(--paper);font-size:12.5px;font-weight:500;
+    opacity:0;transition:opacity .25s ease;
+  }
+  .gallery-item:hover .gallery-caption{opacity:1;}
+  .lightbox{
+    display:none;position:fixed;inset:0;z-index:300;background:rgba(14,31,43,0.94);
+    align-items:center;justify-content:center;padding:32px;cursor:zoom-out;
+  }
+  .lightbox.open{display:flex;}
+  .lightbox img{max-width:92vw;max-height:88vh;border-radius:4px;box-shadow:0 20px 60px rgba(0,0,0,0.4);}
+
+  /* ---------- CTA BANNER ---------- */
+  .cta-banner{
+    position:relative;overflow:hidden;
+    background:var(--ink);color:var(--paper);padding:80px 0;
+    border-top:1px solid rgba(228,199,147,0.15);
+  }
+  .cta-banner::before{
+    content:"";position:absolute;top:0;left:0;right:0;height:3px;
+    background:linear-gradient(90deg, var(--sand) 0%, var(--teal-light) 100%);
+  }
+  .cta-glow{
+    position:absolute;top:-40%;right:-10%;width:60%;height:180%;
+    background:radial-gradient(ellipse at center, rgba(31,138,130,0.35), transparent 70%);
+    pointer-events:none;
+  }
+  .cta-mark{
+    position:absolute;right:-40px;bottom:-60px;width:280px;height:280px;
+    fill:rgba(228,199,147,0.06);pointer-events:none;
+  }
+  .cta-inner{
+    position:relative;display:flex;justify-content:space-between;align-items:center;gap:40px;flex-wrap:wrap;
+  }
+  .cta-copy{max-width:560px;}
+  .cta-copy .eyebrow{color:var(--sand-light);margin-bottom:16px;}
+  .cta-inner h2{color:var(--white);font-size:clamp(24px,3vw,34px);}
+  .cta-inner p{margin:14px 0 0;color:rgba(242,236,222,0.6);font-size:15.5px;}
+  .cta-button{
+    display:inline-flex;align-items:center;gap:10px;flex:none;
+    background:var(--sand);color:var(--ink);
+  }
+  .cta-button:hover{background:var(--sand-light);}
+  .cta-button svg{transition:transform .2s ease;}
+  .cta-button:hover svg{transform:translateX(3px);}
+
+  /* ---------- CONTACT ---------- */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:stretch;}
+  .contact-card{
+    background:var(--ink);color:var(--paper);padding:44px 40px;border-radius:var(--radius);
+    display:flex;flex-direction:column;align-items:flex-start;
+  }
+  .contact-card .eyebrow{color:var(--sand-light);}
+  .contact-card h3{color:var(--paper);font-size:24px;margin:14px 0 20px;}
+  .email-btn{
+    display:inline-flex;align-items:center;gap:12px;background:var(--sand);color:var(--ink);
+    font-weight:600;font-size:15px;padding:16px 24px;border-radius:var(--radius);margin-top:10px;
+  }
+  .email-btn:hover{background:var(--sand-light);}
+  .contact-meta{margin-top:auto;padding-top:32px;display:flex;flex-direction:column;gap:10px;font-size:14px;color:rgba(242,236,222,0.62);}
+  .contact-list{display:flex;flex-direction:column;gap:0;}
+  .contact-list .row{
+    display:flex;justify-content:space-between;padding:20px 0;border-bottom:1px solid var(--line);
+    font-size:14.5px;
+  }
+  .contact-list .row span:first-child{color:var(--muted);}
+  .contact-list .row span:last-child{font-weight:600;color:var(--ink);text-align:right;}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--ink);color:rgba(242,236,222,0.55);padding:56px 0 28px;}
+  .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(242,236,222,0.1);}
+  .footer-brand .brand-text .name{color:var(--paper);}
+  .footer-brand p{margin-top:16px;font-size:13.5px;line-height:1.7;max-width:280px;color:rgba(242,236,222,0.5);}
+  .footer-col h5{font-family:'IBM Plex Mono';font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--sand-light);margin-bottom:16px;}
+  .footer-col a, .footer-col span{display:block;font-size:14px;margin-bottom:11px;color:rgba(242,236,222,0.6);}
+  .footer-col a:hover{color:var(--paper);}
+  .footer-bottom{display:flex;justify-content:space-between;padding-top:24px;font-size:12.5px;color:rgba(242,236,222,0.4);flex-wrap:wrap;gap:10px;}
+
+  /* ---------- ISO BADGE ---------- */
+  .iso-badge{width:96px;height:96px;flex:none;}
+  .iso-badge.sm{width:72px;height:72px;}
+  .iso-chip{
+    display:inline-flex;align-items:center;gap:10px;margin-top:26px;
+    border:1px solid rgba(228,199,147,0.4);border-radius:40px;padding:8px 16px 8px 10px;
+    font-family:'IBM Plex Mono';font-size:11px;letter-spacing:0.1em;text-transform:uppercase;
+    color:var(--sand-light);
+  }
+  .iso-chip svg{width:26px;height:26px;flex:none;}
+
+  /* ---------- FACT BAND ---------- */
+  .fact-band{
+    display:grid;grid-template-columns:repeat(6,1fr);
+    background:var(--ink);color:var(--paper);border-radius:var(--radius);
+    margin-top:44px;overflow:hidden;
+  }
+  .fact-band .fact{
+    padding:26px 24px;border-right:1px solid rgba(242,236,222,0.12);
+    display:flex;flex-direction:column;gap:8px;
+  }
+  .fact-band .fact:last-child{border-right:none;}
+  .fact-band .fact span{
+    font-family:'IBM Plex Mono';font-size:10px;letter-spacing:0.12em;text-transform:uppercase;
+    color:var(--sand-light);
+  }
+  .fact-band .fact b{
+    font-family:'Space Grotesk';font-weight:600;font-size:15px;line-height:1.35;
+    color:rgba(242,236,222,0.92);
+  }
+  .pull-quote{
+    margin-top:22px;font-family:'Space Grotesk';font-style:italic;font-weight:600;
+    font-size:18px;color:var(--sand);
+  }
+
+  /* ---------- LEVEL TAGS ---------- */
+  .level{
+    display:inline-block;margin-top:6px;font-family:'IBM Plex Mono';font-size:10.5px;
+    letter-spacing:0.08em;text-transform:uppercase;color:var(--sand);
+  }
+  .custom-note{
+    margin-top:22px;background:var(--paper-2);border:1px solid var(--line);
+    padding:20px 22px;border-radius:var(--radius);
+  }
+  .custom-note h4{font-size:15.5px;margin:0 0 6px;}
+  .custom-note p{margin:0;font-size:13.5px;color:var(--muted);}
+
+  /* ---------- SPOTLIGHT ---------- */
+  .spotlight{background:var(--ink-2);color:var(--paper);}
+  .spotlight-grid{display:grid;grid-template-columns:0.95fr 1.05fr;gap:56px;align-items:center;}
+  .spotlight-grid p.body{color:rgba(242,236,222,0.7);font-size:15.5px;}
+  .spot-steps{display:flex;flex-direction:column;gap:12px;}
+  .spot-step{
+    display:grid;grid-template-columns:44px 1fr;gap:16px;align-items:start;
+    background:rgba(242,236,222,0.04);border:1px solid var(--line-dark);
+    padding:20px 22px;border-radius:var(--radius);
+  }
+  .spot-step .snum{font-family:'IBM Plex Mono';font-size:12px;color:var(--sand-light);padding-top:2px;}
+  .spot-step h4{color:var(--paper);font-size:16px;margin:0 0 5px;}
+  .spot-step p{margin:0;font-size:13.5px;color:rgba(242,236,222,0.62);}
+
+  /* ---------- QUALITY ---------- */
+  .quality{background:var(--ink);color:var(--paper);}
+  .cert-grid{display:grid;grid-template-columns:1.12fr 0.88fr;gap:56px;align-items:center;}
+  .cert-table{margin-top:26px;border-top:1px solid var(--line-dark);}
+  .cert-table .crow{
+    display:flex;justify-content:space-between;gap:20px;padding:15px 0;
+    border-bottom:1px solid var(--line-dark);font-size:14px;
+  }
+  .cert-table .crow span:first-child{
+    font-family:'IBM Plex Mono';font-size:10.5px;letter-spacing:0.12em;text-transform:uppercase;
+    color:var(--sand-light);flex:none;padding-top:3px;
+  }
+  .cert-table .crow span:last-child{text-align:right;color:rgba(242,236,222,0.88);}
+  .scope-card{display:flex;flex-direction:column;}
+  /* certificate fills the card; scope text slides up over it on hover */
+  .cert-figure{
+    display:block;position:relative;overflow:hidden;
+    border:1px solid var(--line-dark);border-radius:var(--radius);
+    background:var(--white);transition:border-color .2s ease;
+  }
+  .cert-figure:hover, .cert-figure:focus-visible{border-color:var(--sand);}
+  .cert-figure img{width:100%;height:auto;display:block;}
+  .cert-open{
+    position:absolute;top:14px;right:14px;z-index:2;
+    display:inline-flex;align-items:center;gap:7px;
+    padding:8px 14px;border-radius:30px;background:rgba(14,31,43,0.92);
+    font-family:'IBM Plex Mono';font-size:9.5px;letter-spacing:0.1em;text-transform:uppercase;
+    color:var(--sand-light);
+    opacity:0;transform:translateY(-6px);transition:opacity .25s ease, transform .25s ease;
+  }
+  .cert-figure:hover .cert-open, .cert-figure:focus-visible .cert-open{opacity:1;transform:translateY(0);}
+  .scope-reveal{
+    position:absolute;left:0;right:0;bottom:0;z-index:1;
+    display:block;padding:26px 26px 28px;
+    background:linear-gradient(to top, rgba(14,31,43,0.985) 82%, rgba(14,31,43,0.93));
+    border-top:2px solid var(--sand);
+    transform:translateY(101%);
+    transition:transform .42s cubic-bezier(.4,0,.2,1);
+  }
+  .cert-figure:hover .scope-reveal, .cert-figure:focus-visible .scope-reveal{transform:translateY(0);}
+  .scope-reveal-label{
+    display:block;margin-bottom:14px;
+    font-family:'IBM Plex Mono';font-size:10.5px;letter-spacing:0.12em;text-transform:uppercase;
+    color:var(--teal-light);
+  }
+  .scope-line{
+    display:block;font-size:13px;line-height:1.62;color:rgba(242,236,222,0.88);
+    padding-left:16px;position:relative;
+  }
+  .scope-line + .scope-line{margin-top:12px;}
+  .scope-line::before{
+    content:"";position:absolute;left:0;top:8px;width:6px;height:1.5px;background:var(--sand);
+  }
+  @media (prefers-reduced-motion: reduce){
+    .scope-reveal, .cert-open{transition:none;}
+  }
+  /* touch devices have no hover: show the scope beneath the certificate instead */
+  @media (hover:none){
+    .scope-reveal{
+      position:static;transform:none;padding:24px 22px;
+      background:rgba(242,236,222,0.05);border-top:1px solid var(--line-dark);
+    }
+    .cert-open{opacity:1;transform:none;}
+  }
+  .scope-foot{
+    margin-top:20px;padding:20px 22px;border:1px solid var(--line-dark);
+    border-radius:var(--radius);background:rgba(242,236,222,0.05);
+    font-size:12.5px;line-height:1.65;color:rgba(242,236,222,0.55);
+  }
+  .control-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:40px;}
+  .control-item{
+    border:1px solid var(--line-dark);background:rgba(242,236,222,0.04);
+    padding:24px 22px;border-radius:var(--radius);
+  }
+  .control-item h4{color:var(--sand-light);font-size:15.5px;margin:0 0 8px;}
+  .control-item p{margin:0;font-size:13.5px;color:rgba(242,236,222,0.6);}
+
+  /* ---------- TRAINING METHOD ---------- */
+  .method-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+  .method-item{background:var(--white);border:1px solid var(--line);padding:26px 24px;border-radius:var(--radius);}
+  .method-item h4{font-size:15.5px;margin:0 0 8px;}
+  .method-item p{margin:0;font-size:13.5px;color:var(--muted);}
+  .formats-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:56px;margin-top:48px;align-items:start;}
+  .format-row{
+    display:grid;grid-template-columns:auto 1fr;gap:18px;padding:20px 0;border-bottom:1px solid var(--line);
+  }
+  .format-row:first-of-type{border-top:1px solid var(--line);}
+  .format-row .flabel{font-family:'IBM Plex Mono';font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--sand);padding-top:3px;min-width:118px;}
+  .format-row p{margin:0;font-size:14px;color:var(--muted);}
+  .delivered-table{border-top:1px solid var(--line);}
+  .delivered-table .drow{
+    display:flex;justify-content:space-between;align-items:baseline;gap:16px;
+    padding:14px 0;border-bottom:1px solid var(--line);
+  }
+  .delivered-table .drow b{font-family:'Space Grotesk';font-size:15.5px;color:var(--ink);font-weight:600;}
+  .delivered-table .drow .num{font-family:'IBM Plex Mono';font-size:11.5px;color:var(--sand);margin-right:14px;}
+  .delivered-table .drow .region{font-size:12.5px;color:var(--muted);}
+  .note{font-size:12.5px;color:var(--muted);font-style:italic;margin-top:18px;}
+
+  /* ---------- PATHWAYS ---------- */
+  .pathway-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+  .pathway{background:var(--white);border:1px solid var(--line);padding:26px 22px;border-radius:var(--radius);}
+  .pathway h4{font-size:17px;margin:0 0 4px;}
+  .pathway .goal{font-family:'IBM Plex Mono';font-size:10.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--sand);}
+  .pathway ol{margin:18px 0 0;padding:0;list-style:none;counter-reset:p;}
+  .pathway ol li{
+    font-size:13.5px;color:var(--muted);padding:9px 0;border-top:1px solid var(--line);
+  }
+  .pathway ol li b{color:var(--ink);font-weight:600;}
+
+  /* ---------- ENGAGEMENT MODELS ---------- */
+  .model-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+  .model{background:var(--white);border:1px solid var(--line);padding:30px 26px;border-radius:var(--radius);transition:.2s;}
+  .model:hover{border-color:var(--teal);}
+  .model h4{font-size:20px;margin:14px 0 8px;}
+  .model > p{margin:0;font-size:14px;color:var(--muted);}
+  .model svg{width:30px;height:30px;color:var(--sand);}
+  .model ul{margin:20px 0 0;padding:0;list-style:none;}
+  .model ul li{
+    font-size:13.5px;color:var(--muted);padding:10px 0 10px 20px;position:relative;border-top:1px solid var(--line);
+  }
+  .model ul li::before{
+    content:"";position:absolute;left:0;top:17px;width:6px;height:6px;background:var(--sand);border-radius:50%;
+  }
+  .model-foot{
+    margin-top:26px;text-align:center;font-family:'Space Grotesk';font-style:italic;font-weight:600;
+    font-size:16px;color:var(--sand);
+  }
+
+  /* ---------- DOWNLOADS ---------- */
+  .downloads{background:var(--paper-2);}
+  .dl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+  .dl-card{
+    display:flex;flex-direction:column;background:var(--white);border:1px solid var(--line);
+    padding:32px 30px;border-radius:var(--radius);transition:.2s;
+  }
+  .dl-card:hover{border-color:var(--teal);}
+  .dl-top{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;}
+  .dl-card .doc-icon{width:34px;height:34px;color:var(--sand);flex:none;}
+  .dl-meta{font-family:'IBM Plex Mono';font-size:10.5px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);}
+  .dl-card h4{font-size:20px;margin:18px 0 8px;}
+  .dl-card p{margin:0 0 22px;font-size:14px;color:var(--muted);flex:1;}
+  .dl-btn{
+    display:inline-flex;align-items:center;gap:10px;align-self:flex-start;
+    background:var(--ink);color:var(--paper);font-weight:600;font-size:14px;
+    padding:13px 22px;border-radius:6px;transition:.2s;
+  }
+  .dl-btn:hover{background:var(--teal);}
+  .dl-btn svg{width:16px;height:16px;}
+
+  /* ---------- GALLERY NOTE ---------- */
+  .gallery-note{
+    margin-top:20px;font-size:12.5px;color:var(--muted);font-style:italic;text-align:center;
+  }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width:980px){
+    .hero-grid{grid-template-columns:1fr;}
+    .hero-art{height:300px;order:-1;}
+    .about-grid, .coverage-grid, .contact-grid{grid-template-columns:1fr;gap:40px;}
+    .services-grid{grid-template-columns:repeat(2,1fr);}
+    .pillars-two{grid-template-columns:1fr;}
+    .pillar-block{padding:34px 30px 38px;}
+    .approach-list{grid-template-columns:repeat(2,1fr);}
+    .approach-item{border-bottom:1px solid var(--line-dark);padding-bottom:30px;}
+    .sector-grid{grid-template-columns:repeat(2,1fr);}
+    .footer-grid{grid-template-columns:1fr 1fr;}
+    .gallery-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:220px;}
+    .spotlight-grid, .cert-grid, .formats-grid{grid-template-columns:1fr;gap:40px;}
+    .control-grid, .method-grid, .model-grid{grid-template-columns:repeat(2,1fr);}
+    .pathway-grid{grid-template-columns:repeat(2,1fr);}
+    .dl-grid{grid-template-columns:1fr;}
+    .fact-band{grid-template-columns:repeat(3,1fr);}
+    .fact-band .fact:nth-child(3n){border-right:none;}
+    .fact-band .fact:nth-child(-n+3){border-bottom:1px solid rgba(242,236,222,0.12);}
+  }
+  @media (max-width:940px){
+    nav.links{display:none;}
+    .burger{display:block;}
+    .mobile-panel.open{display:flex;}
+  }
+  @media (max-width:720px){
+    .hero{padding-top:20px;}
+    .hero-stats{gap:24px;}
+    .services-grid{grid-template-columns:1fr;}
+    .pillar-block{padding:28px 22px 32px;}
+    .approach-list{grid-template-columns:1fr;}
+    .approach-item{border-right:none;}
+    .sector-grid{grid-template-columns:1fr 1fr;}
+    .footer-grid{grid-template-columns:1fr 1fr;gap:28px;}
+    .cta-inner{flex-direction:column;align-items:flex-start;}
+    .section{padding:60px 0;}
+    .gallery-grid{grid-template-columns:1fr;grid-auto-rows:220px;}
+    .control-grid, .method-grid, .model-grid, .pathway-grid{grid-template-columns:1fr;}
+    .cert-table .crow{flex-direction:column;gap:4px;}
+    .cert-table .crow span:last-child{text-align:left;}
+    .fact-band{grid-template-columns:repeat(2,1fr);}
+    .fact-band .fact:nth-child(2n){border-right:none;}
+    .fact-band .fact:nth-child(3n){border-right:1px solid rgba(242,236,222,0.12);}
+    .fact-band .fact:nth-child(6n){border-right:none;}
+    .fact-band .fact:not(:nth-last-child(-n+2)){border-bottom:1px solid rgba(242,236,222,0.12);}
+    .format-row{grid-template-columns:1fr;gap:6px;}
+    .dl-card{padding:26px 22px;}
+  }
+  @media (max-width:480px){
+    .sector-grid{grid-template-columns:1fr;}
+    .footer-grid{grid-template-columns:1fr;}
+    .hero-stats{gap:22px 30px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="#top" class="brand">
+      <svg class="brand-mark" viewBox="0 0 24 24">
+        <path fill="#0E1F2B" d="M18.6 6.62c-1.44 0-2.8.56-3.77 1.53L12 10.66l-1.52 1.34.01.01-2.7 2.39c-.64.64-1.49.99-2.4.99-1.87 0-3.39-1.51-3.39-3.38S3.53 8.62 5.4 8.62c.91 0 1.76.35 2.44 1.03l1.13 1.01 1.51-1.34L9.22 8.2C8.2 7.18 6.84 6.62 5.4 6.62c-2.98 0-5.4 2.42-5.4 5.4s2.42 5.4 5.4 5.4c1.44 0 2.8-.56 3.77-1.53l2.83-2.53.01.01L13.52 12h-.01l2.69-2.4c.64-.64 1.49-.99 2.4-.99 1.87 0 3.39 1.51 3.39 3.38s-1.52 3.39-3.39 3.39c-.9 0-1.76-.35-2.44-1.03l-1.14-1.01-1.51 1.34 1.27 1.12c1.02 1.01 2.37 1.57 3.82 1.57 2.98 0 5.4-2.42 5.4-5.4s-2.42-5.37-5.4-5.37z"/>
+      </svg>
+      <span class="brand-text">
+        <span class="name">INFINITE ICON</span>
+        <span class="sub">Technology</span>
+      </span>
+    </a>
+    <nav class="links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#quality">Quality</a>
+      <a href="#training">Training</a>
+      <a href="#coverage">Coverage</a>
+      <a href="#downloads">Downloads</a>
+      <a href="#contact" class="nav-cta">Get in touch</a>
+    </nav>
+    <button class="burger" aria-label="Toggle menu" onclick="document.querySelector('.mobile-panel').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-panel">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#quality">Quality</a>
+    <a href="#training">Training</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#coverage">Coverage</a>
+    <a href="#sectors">Sectors</a>
+    <a href="#downloads">Downloads</a>
+    <a href="#contact" class="nav-cta">Get in touch</a>
+  </div>
+</header>
+
+<div id="top"></div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid">
+    <div>
+      <div class="eyebrow"><span class="dot"></span>IT Consultancy · Dubai, UAE</div>
+      <h1>Capability and technology, built for <em>UAE &amp; Africa</em> growth.</h1>
+      <p class="lead">Infinite Icon Technology helps organisations across the UAE and Africa modernise their operations and build the internal skills to sustain it, through corporate training and complete digital transformation.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn-primary">Book a consultation</a>
+        <a href="#services" class="btn-ghost">Explore services</a>
+      </div>
+      <a href="#quality" class="iso-chip">
+        <svg viewBox="0 0 100 100" fill="none" aria-hidden="true">
+          <circle cx="50" cy="50" r="46" stroke="currentColor" stroke-width="3"/>
+          <circle cx="50" cy="50" r="38" stroke="currentColor" stroke-width="1.2" opacity="0.55"/>
+          <text x="50" y="55" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="21" font-weight="700" fill="currentColor">ISO</text>
+        </svg>
+        Quality management certified to ISO 9001:2015
+      </a>
+      <div class="hero-stats">
+        <div><b>2022</b><span>Founded in Dubai</span></div>
+        <div><b>2</b><span>Regions served</span></div>
+        <div><b>7</b><span>Countries trained in</span></div>
+        <div><b>8</b><span>Sectors served</span></div>
+        <div><b>360°</b><span>Advise, train, deliver, sustain</span></div>
+      </div>
+    </div>
+
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 560 420" preserveAspectRatio="xMidYMid meet">
+        <defs>
+          <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#C89B5C" stop-opacity="0.9"/>
+            <stop offset="100%" stop-color="#3FB3A8" stop-opacity="0.5"/>
+          </linearGradient>
+        </defs>
+        <!-- routes from hub (Dubai) -->
+        <path class="route-line" d="M110,150 C160,190 210,220 260,240"/>
+        <path class="route-line" d="M110,150 C130,220 160,270 200,310"/>
+        <path class="route-line" d="M110,150 C90,220 110,290 150,350"/>
+
+        <!-- nodes -->
+        <circle cx="110" cy="150" r="5.5" fill="#C89B5C"/>
+        <circle class="pulse" cx="110" cy="150" r="3.2" fill="#F2ECDE"/>
+        <text x="122" y="146" class="node-label hub">DUBAI · HQ</text>
+
+        <circle class="pulse" cx="260" cy="240" r="3.2" fill="#3FB3A8"/>
+        <text x="270" y="238" class="node-label">ADDIS ABABA</text>
+
+        <circle class="pulse" cx="200" cy="310" r="3.2" fill="#3FB3A8"/>
+        <text x="210" y="308" class="node-label">DJIBOUTI</text>
+
+        <circle class="pulse" cx="150" cy="350" r="3.2" fill="#3FB3A8"/>
+        <text x="60" y="372" class="node-label">JOHANNESBURG</text>
+      </svg>
+    </div>
+  </div>
+
+  <div class="strip">
+    <div class="track">
+      <span>ISO 9001:2015 Certified</span> · Corporate Training · <span>Digital Transformation Advisory</span> · Digital Banking &amp; Fintech · <span>IT Infrastructure</span> · Cybersecurity · <span>POS, ERP &amp; Cash Registers</span> · Software Development · Managed Services ·
+      <span>ISO 9001:2015 Certified</span> · Corporate Training · <span>Digital Transformation Advisory</span> · Digital Banking &amp; Fintech · <span>IT Infrastructure</span> · Cybersecurity · <span>POS, ERP &amp; Cash Registers</span> · Software Development · Managed Services ·
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div>
+        <div class="section-head" style="margin-bottom:26px;">
+          <div class="eyebrow"><span class="dot"></span>Who we are</div>
+          <h2>A strategic technology partner, not just a vendor.</h2>
+        </div>
+        <div class="about-copy">
+          <p>Founded in 2022 and headquartered in Dubai, Infinite Icon Technology is an IT consultancy built for the pace of the UAE and Africa markets. We work with banks, government entities, and fast growing businesses that need technology to move as fast as their ambitions.</p>
+          <p>Our approach is deliberately twofold: we design and implement the technology, and we train the people who will run it. That combination of advisory and capability building is what makes transformation stick after the project team leaves.</p>
+        </div>
+        <p class="pull-quote">“Advise, train, deliver, sustain.”</p>
+      </div>
+      <div class="pillars">
+        <div class="pillar">
+          <span class="num">01</span>
+          <div><h4>Centred on the client</h4><p>Every engagement starts with your operating constraints rather than a standard playbook, and solutions are scoped to your team, budget and regulatory environment.</p></div>
+        </div>
+        <div class="pillar">
+          <span class="num">02</span>
+          <div><h4>Built to scale and adapt</h4><p>Architectures and training curricula are modular, so they extend as your organisation grows across new markets and business lines.</p></div>
+        </div>
+        <div class="pillar">
+          <span class="num">03</span>
+          <div><h4>Regional fluency</h4><p>Engagements span the UAE and African markets, with attention to local infrastructure realities, compliance and talent availability.</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="fact-band">
+      <div class="fact"><span>Headquarters</span><b>Dubai, United Arab Emirates</b></div>
+      <div class="fact"><span>Founded</span><b>2022</b></div>
+      <div class="fact"><span>Regions served</span><b>UAE &amp; Africa</b></div>
+      <div class="fact"><span>Engagement types</span><b>Training · Advisory · Delivery</b></div>
+      <div class="fact"><span>Quality system</span><b>ISO 9001:2015 certified</b></div>
+      <div class="fact"><span>Legal entity</span><b>Infinite Icon Technology LLC</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section tight" id="services" style="background:var(--paper-2);">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow"><span class="dot"></span>What we do</div>
+      <h2>Two practice areas, one accountable partner.</h2>
+      <p>Everything we do sits under IT Consulting or Corporate Training, and the two are designed to reinforce each other.</p>
+    </div>
+    <div class="pillars-two">
+
+      <div class="pillar-block">
+        <div class="pillar-block-head">
+          <svg class="service-icon" viewBox="0 0 40 40" fill="none"><rect x="7" y="9" width="26" height="17" rx="1.5" stroke="currentColor" stroke-width="2.2"/><path d="M14 32h12M20 26v6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+          <span class="service-tag">Practice area 01</span>
+          <h3>IT Consulting</h3>
+          <p>Advisory, infrastructure and practical support that keeps your systems secure, current and running.</p>
+        </div>
+        <div class="sub-service-list">
+          <div class="sub-service">
+            <svg viewBox="0 0 40 40" fill="none"><path d="M20 6 L33 12 V20 C33 28 27 33 20 35 C13 33 7 28 7 20 V12 Z" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/></svg>
+            <div><h4>Cybersecurity &amp; Risk Advisory</h4><p>Risk assessments, security architecture and staff readiness programmes that reduce exposure without slowing the business down.</p></div>
+          </div>
+          <div class="sub-service">
+            <svg viewBox="0 0 40 40" fill="none"><rect x="6" y="22" width="6" height="12" fill="currentColor"/><rect x="17" y="14" width="6" height="20" fill="currentColor"/><rect x="28" y="8" width="6" height="26" fill="currentColor"/></svg>
+            <div><h4>IT Infrastructure</h4><p>Networking, data processing and storage, and systems operations designed, deployed and supported end to end.</p></div>
+          </div>
+          <div class="sub-service">
+            <svg viewBox="0 0 40 40" fill="none"><path d="M12 26a6 6 0 0 1 1-11.9A8 8 0 0 1 28 15a6 6 0 0 1 1 11h-17z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg>
+            <div><h4>Cloud Solutions</h4><p>Migration, architecture and management across public, private and hybrid cloud environments.</p></div>
+          </div>
+          <div class="sub-service">
+            <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="13" stroke="currentColor" stroke-width="2.2"/><path d="M20 13v7l5 4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+            <div><h4>Managed Services</h4><p>Ongoing monitoring, maintenance and support so internal teams can stay focused on the business.</p></div>
+          </div>
+          <div class="sub-service">
+            <svg viewBox="0 0 40 40" fill="none"><rect x="8" y="12" width="24" height="16" rx="2" stroke="currentColor" stroke-width="2.2"/><path d="M8 18h24" stroke="currentColor" stroke-width="2.2"/><circle cx="14" cy="15" r="1.3" fill="currentColor"/></svg>
+            <div><h4>POS, ERP &amp; Cash Register Support</h4><p>End-to-end supply, installation and support for point-of-sale, ERP and cash register systems, covering both hardware and software.</p></div>
+          </div>
+          <div class="sub-service">
+            <svg viewBox="0 0 40 40" fill="none"><path d="M14 12 L6 20 L14 28M26 12 L34 20 L26 28" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div><h4>Software &amp; Systems Development</h4><p>Custom applications and integrations that connect your technology to how the business actually operates.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pillar-block">
+        <div class="pillar-block-head">
+          <svg class="service-icon" viewBox="0 0 40 40" fill="none"><path d="M8 30 L18 14 L26 24 L32 10" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="32" cy="10" r="2.6" fill="currentColor"/></svg>
+          <span class="service-tag">Practice area 02</span>
+          <h3>Corporate Training</h3>
+          <p>Role-based programmes that build the skills to run and sustain your technology long after we leave.</p>
+        </div>
+        <div class="sub-service-list">
+          <div class="sub-service">
+            <svg viewBox="0 0 40 40" fill="none"><rect x="6" y="8" width="28" height="20" rx="2" stroke="currentColor" stroke-width="2.2"/><path d="M6 24h28M14 32h12" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+            <div><h4>Digital Literacy &amp; IT Fundamentals</h4><span class="level">Foundation · All staff, non-technical roles</span><p>Foundational skills that bring every team member up to speed on core digital tools and ways of working.</p></div>
+          </div>
+          <div class="sub-service">
+            <svg viewBox="0 0 40 40" fill="none"><path d="M20 6 L33 12 V20 C33 28 27 33 20 35 C13 33 7 28 7 20 V12 Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg>
+            <div><h4>Cybersecurity Awareness</h4><span class="level">Foundation to Intermediate · All staff</span><p>Practical training that helps staff recognise and respond to everyday security risks.</p></div>
+          </div>
+          <div class="sub-service">
+            <svg viewBox="0 0 40 40" fill="none"><rect x="8" y="12" width="24" height="16" rx="2" stroke="currentColor" stroke-width="2.2"/><path d="M8 18h24" stroke="currentColor" stroke-width="2.2"/></svg>
+            <div><h4>ERP &amp; Systems User Training</h4><span class="level">Role-based · End users, super-users, admins</span><p>Getting teams confident and productive on the platforms your business already runs on.</p></div>
+          </div>
+          <div class="sub-service">
+            <svg viewBox="0 0 40 40" fill="none"><path d="M8 30 L18 14 L26 24 L32 10" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div><h4>IT Leadership &amp; Strategy</h4><span class="level">Advanced · Heads of function and sponsors</span><p>Executive and management programmes that build confident, technically literate leadership.</p></div>
+          </div>
+          <div class="sub-service">
+            <svg viewBox="0 0 40 40" fill="none"><rect x="6" y="22" width="6" height="12" fill="currentColor"/><rect x="17" y="14" width="6" height="20" fill="currentColor"/><rect x="28" y="8" width="6" height="26" fill="currentColor"/></svg>
+            <div><h4>Data-Driven Decision Making</h4><span class="level">Intermediate · Managers, analysts, ops leads</span><p>Practical methods for turning everyday business data into better, faster decisions.</p></div>
+          </div>
+          <div class="sub-service">
+            <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="13" stroke="currentColor" stroke-width="2.2"/><path d="M20 13v7l5 4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+            <div><h4>Customer Service Excellence</h4><span class="level">Foundation to Intermediate · Front-line teams</span><p>Service standards and soft skills training for customer-facing teams.</p></div>
+          </div>
+        </div>
+        <div class="custom-note">
+          <h4>Not on this list?</h4>
+          <p>Custom Training Development builds the programme from scratch — curriculum, materials, exercises and assessment — against your own systems, policies and regulatory obligations. <a href="#training" style="color:var(--teal);font-weight:600;">See how a programme is built</a>.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE SPOTLIGHT -->
+<section class="section tight spotlight" id="pos">
+  <div class="wrap on-dark">
+    <div class="spotlight-grid">
+      <div>
+        <div class="section-head" style="margin-bottom:0;">
+          <div class="eyebrow" style="color:var(--sand-light);"><span class="dot" style="background:var(--sand-light);box-shadow:0 0 0 4px rgba(200,155,92,0.18);"></span>Service spotlight · POS, ERP &amp; cash registers</div>
+          <h2>Supplied, deployed and supported.</h2>
+        </div>
+        <p class="body">We supply, install and support point-of-sale, ERP and cash register environments end to end, covering both the hardware estate and the software that runs on it. Terminals are sourced from certified payment hardware manufacturers, then configured, deployed and maintained by our team.</p>
+        <p class="pull-quote" style="color:var(--sand-light);">One accountable partner across procurement, rollout, integration and the support desk.</p>
+      </div>
+      <div class="spot-steps">
+        <div class="spot-step">
+          <span class="snum">01</span>
+          <div><h4>Supply &amp; procurement</h4><p>Terminal selection, certified hardware sourcing and fleet specification.</p></div>
+        </div>
+        <div class="spot-step">
+          <span class="snum">02</span>
+          <div><h4>Deployment &amp; installation</h4><p>Site rollout, configuration, key injection and staff handover.</p></div>
+        </div>
+        <div class="spot-step">
+          <span class="snum">03</span>
+          <div><h4>Integration &amp; software</h4><p>ERP, cash register and back-office integration into existing systems.</p></div>
+        </div>
+        <div class="spot-step">
+          <span class="snum">04</span>
+          <div><h4>Maintenance &amp; support</h4><p>Monitoring, spares, fault resolution and refresher user training.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUALITY ASSURANCE -->
+<section class="section quality" id="quality">
+  <div class="wrap on-dark">
+    <div class="cert-grid">
+      <div>
+        <div class="section-head" style="margin-bottom:0;">
+          <div class="eyebrow" style="color:var(--sand-light);"><span class="dot" style="background:var(--sand-light);box-shadow:0 0 0 4px rgba(200,155,92,0.18);"></span>Quality assurance</div>
+          <h2>ISO 9001:2015 certified.</h2>
+          <p>Our quality management system is registered by Veritas System Quality Certificates Issuing LLC and accredited by EIAC, the Emirates International Accreditation Centre, under the IAF multilateral recognition arrangement.</p>
+        </div>
+        <div class="cert-table">
+          <div class="crow"><span>Standard</span><span>ISO 9001:2015 — Quality Management System</span></div>
+          <div class="crow"><span>Registered entity</span><span>Infinite Icon Technology L.L.C, Deira, Dubai, UAE</span></div>
+          <div class="crow"><span>Certificate no.</span><span>VSQC099-421263839</span></div>
+          <div class="crow"><span>Certification body</span><span>Veritas System Quality Certificates Issuing LLC</span></div>
+          <div class="crow"><span>Accreditation</span><span>EIAC · CB-QMS-099 · IAF MLA member</span></div>
+          <div class="crow"><span>IAF / EA-NACE code</span><span>33-62.02 / 62.09 / 63.11</span></div>
+          <div class="crow"><span>Initial certificate</span><span>22 May 2026 · Issue No. 01</span></div>
+          <div class="crow"><span>Surveillance due</span><span>21 May 2027 · three-year certification cycle</span></div>
+        </div>
+        <p class="note" style="color:rgba(242,236,222,0.5);">Validity is confirmed at veritasassurance.com and is subject to successful annual surveillance audit.</p>
+      </div>
+      <div class="scope-card">
+        <a class="cert-figure" href="downloads/Infinite_Icon_ISO_9001_Certificate.pdf" target="_blank" rel="noopener">
+          <img src="images/iso-9001-certificate.jpg" alt="ISO 9001:2015 certificate of registration issued to Infinite Icon Technology L.L.C by Veritas System Quality Certificates Issuing LLC, certificate number VSQC099-421263839" loading="lazy">
+          <span class="cert-open">View full certificate (PDF)</span>
+          <span class="scope-reveal">
+            <span class="scope-reveal-label">The quality management system is applicable to</span>
+            <span class="scope-line">Service Provider of Data Management &amp; Cyber Security Services, IT Infrastructure, Cloud Service &amp; Datacenters Providers, Information Technology Network Services Datacenter Colocation Services.</span>
+            <span class="scope-line">Data Classification &amp; Analysis Services, Computer Systems &amp; Communication Equipment Software Design, Internet Content Provider, Education &amp; Training Computer Software, Social Media Applications Development &amp; Management, Marketing Services Via Social Media, Portal, Electronic Chips Programming and Web-Design.</span>
+          </span>
+        </a>
+        <div class="scope-foot">
+          Certificate No. VSQC099-421263839 · IAF / EA-NACE Code 33-62.02 / 62.09 / 63.11. Buyers in regulated sectors check scope, not just the badge — this is the registered scope in full, reproduced without paraphrase.
+        </div>
+      </div>
+    </div>
+
+    <div class="section-head" style="margin:72px 0 0;max-width:720px;">
+      <h2 style="font-size:clamp(24px,2.8vw,32px);">What the certification changes for you.</h2>
+      <p>ISO 9001 is a system standard, not a training accolade. These are the specific controls a certified system puts around your programme.</p>
+    </div>
+    <div class="control-grid">
+      <div class="control-item"><h4>Documented scoping</h4><p>Every programme starts from a recorded needs analysis and an agreed set of learning objectives, signed off before design begins.</p></div>
+      <div class="control-item"><h4>Controlled materials</h4><p>Course materials are version-controlled and reviewed, so two cohorts six months apart receive equivalent content.</p></div>
+      <div class="control-item"><h4>Trainer competence records</h4><p>Instructor qualification and subject currency are recorded and reviewed rather than assumed.</p></div>
+      <div class="control-item"><h4>Measured feedback</h4><p>Delegate evaluation and outcome data are collected every cohort and fed into the next revision.</p></div>
+      <div class="control-item"><h4>Non-conformity handling</h4><p>When something falls short there is a defined corrective process with an owner and a closure date.</p></div>
+      <div class="control-item"><h4>Management review</h4><p>Programme performance is reviewed at management level on a fixed cycle, with actions tracked.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TRAINING APPROACH -->
+<section class="section" id="training">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow"><span class="dot"></span>How we train</div>
+      <h2>Training that survives contact with the job.</h2>
+      <p>Most corporate training fails for the same reason: it teaches a system rather than a role, and it arrives after the work has already changed. Everything in our catalogue is built the other way round.</p>
+    </div>
+    <div class="method-grid">
+      <div class="method-item"><h4>Role-based curricula</h4><p>Content is mapped to job function, so each cohort learns what it will actually use rather than a tour of every menu.</p></div>
+      <div class="method-item"><h4>Delivered alongside build</h4><p>Training runs in parallel with implementation, not as an afterthought at handover when attention has moved on.</p></div>
+      <div class="method-item"><h4>Your data, your process</h4><p>Exercises use your configuration, your terminology and your real scenarios wherever policy allows.</p></div>
+      <div class="method-item"><h4>Measured, not assumed</h4><p>Diagnostics before delivery and assessment after, so you can see the change rather than take it on trust.</p></div>
+      <div class="method-item"><h4>Refresher cycles</h4><p>Follow-up sessions keep capability current as systems, threats and regulations change.</p></div>
+      <div class="method-item"><h4>Local and regional fluency</h4><p>Delivered across the UAE and African markets with attention to language, infrastructure and compliance context.</p></div>
+    </div>
+
+    <div class="formats-grid">
+      <div>
+        <h3 style="font-size:24px;margin-bottom:10px;">On site, remote or hybrid.</h3>
+        <p style="color:var(--muted);font-size:15px;margin:0 0 26px;">Cohorts are typically 8 to 16 delegates. Larger populations are run in waves so the business keeps operating while people are trained.</p>
+        <div class="format-row">
+          <span class="flabel">On site</span>
+          <p>Delivered at your premises or a chosen venue, with equipment and materials provided.</p>
+        </div>
+        <div class="format-row">
+          <span class="flabel">Remote</span>
+          <p>Live instructor-led sessions in shorter blocks, suited to distributed teams.</p>
+        </div>
+        <div class="format-row">
+          <span class="flabel">Hybrid</span>
+          <p>Blended cohorts, plus hosted delegation and study-visit programmes.</p>
+        </div>
+      </div>
+      <div>
+        <span class="locations-label">Delivered in</span>
+        <div class="delivered-table">
+          <div class="drow"><b><span class="num">01</span>United Arab Emirates</b><span class="region">Middle East</span></div>
+          <div class="drow"><b><span class="num">02</span>Ethiopia</b><span class="region">Africa</span></div>
+          <div class="drow"><b><span class="num">03</span>Turkey</b><span class="region">Europe / Asia</span></div>
+          <div class="drow"><b><span class="num">04</span>Singapore</b><span class="region">Asia</span></div>
+          <div class="drow"><b><span class="num">05</span>Sweden</b><span class="region">Europe</span></div>
+          <div class="drow"><b><span class="num">06</span>United States</b><span class="region">North America</span></div>
+          <div class="drow"><b><span class="num">07</span>Canada</b><span class="region">North America</span></div>
+        </div>
+        <p class="note">Delivery relationships across Africa additionally span Djibouti and South Africa.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PATHWAYS -->
+<section class="section tight" id="pathways" style="background:var(--paper-2);">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow"><span class="dot"></span>Pathways</div>
+      <h2>Four pathways, built from the same six programmes.</h2>
+      <p>Most organisations do not buy a single course. These are the combinations that come up most often, and the order we recommend running them in.</p>
+    </div>
+    <div class="pathway-grid">
+      <div class="pathway">
+        <h4>All staff</h4>
+        <span class="goal">Baseline capability</span>
+        <ol>
+          <li><b>01</b> Digital Literacy</li>
+          <li><b>02</b> Cybersecurity Awareness</li>
+        </ol>
+      </div>
+      <div class="pathway">
+        <h4>System users</h4>
+        <span class="goal">Platform adoption</span>
+        <ol>
+          <li><b>01</b> Digital Literacy</li>
+          <li><b>03</b> ERP &amp; Systems</li>
+          <li><b>02</b> Cybersecurity Awareness</li>
+        </ol>
+      </div>
+      <div class="pathway">
+        <h4>Managers &amp; analysts</h4>
+        <span class="goal">Decision capability</span>
+        <ol>
+          <li><b>05</b> Data-Driven Decisions</li>
+          <li><b>03</b> ERP &amp; Systems</li>
+          <li><b>02</b> Cybersecurity Awareness</li>
+        </ol>
+      </div>
+      <div class="pathway">
+        <h4>Leadership</h4>
+        <span class="goal">Strategic capability</span>
+        <ol>
+          <li><b>04</b> IT Leadership &amp; Strategy</li>
+          <li><b>05</b> Data-Driven Decisions</li>
+        </ol>
+      </div>
+    </div>
+    <p class="note">Pathways are indicative. Final sequencing is agreed after the needs analysis in stage one.</p>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="section tight" id="gallery">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow"><span class="dot"></span>Training in action</div>
+      <h2>A look inside our corporate training sessions.</h2>
+      <p>Moments from delivery, briefings and delegation sessions with the teams we've trained.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item" onclick="openLightbox('images/gallery-01.jpg')">
+        <img src="images/gallery-01.jpg" alt="Program coordination session" loading="lazy">
+        <div class="gallery-caption">Program coordination session</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('images/gallery-02.jpg')">
+        <img src="images/gallery-02.jpg" alt="Roundtable with delegation partners" loading="lazy">
+        <div class="gallery-caption">Roundtable with delegation partners</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('images/gallery-03.jpg')">
+        <img src="images/gallery-03.jpg" alt="Strategic briefing session" loading="lazy">
+        <div class="gallery-caption">Strategic briefing session</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('images/gallery-04.jpg')">
+        <img src="images/gallery-04.jpg" alt="Leadership working session" loading="lazy">
+        <div class="gallery-caption">Leadership working session</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('images/gallery-05.jpg')">
+        <img src="images/gallery-05.jpg" alt="Institutional planning workshop" loading="lazy">
+        <div class="gallery-caption">Institutional planning workshop</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('images/gallery-06.jpg')">
+        <img src="images/gallery-06.jpg" alt="Team review session" loading="lazy">
+        <div class="gallery-caption">Team review session</div>
+      </div>
+    </div>
+    <p class="gallery-note">Photography is from live delivery and delegation programmes. Publication consent is confirmed before any image showing a client or delegation is used.</p>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img" src="" alt="Enlarged gallery image">
+</div>
+
+<!-- APPROACH -->
+<section class="section approach" id="approach">
+  <div class="wrap on-dark">
+    <div class="section-head">
+      <div class="eyebrow" style="color:var(--sand-light);"><span class="dot" style="background:var(--sand-light);box-shadow:0 0 0 4px rgba(200,155,92,0.18);"></span>How we work</div>
+      <h2>Four stages, run the same way every time.</h2>
+      <p>Transformation only holds if the sequence is right: assess before you build, and train while you build — not after.</p>
+    </div>
+  </div>
+  <div class="approach-list wrap">
+    <div class="approach-item">
+      <span class="step">Stage 1</span>
+      <h4>Assess</h4>
+      <p>Audit current systems, skills and processes against your business objectives to find the most impactful starting point.</p>
+    </div>
+    <div class="approach-item">
+      <span class="step">Stage 2</span>
+      <h4>Design</h4>
+      <p>Architect the technical solution and the accompanying training curriculum together, so capability is built in from day one.</p>
+    </div>
+    <div class="approach-item">
+      <span class="step">Stage 3</span>
+      <h4>Deliver</h4>
+      <p>Implement infrastructure, software and platforms while running the training programme in parallel with your team.</p>
+    </div>
+    <div class="approach-item">
+      <span class="step">Stage 4</span>
+      <h4>Sustain</h4>
+      <p>Managed support, refresher training and roadmap reviews keep the transformation compounding after launch.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ENGAGEMENT MODELS -->
+<section class="section tight" id="models">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow"><span class="dot"></span>Engagement models</div>
+      <h2>Three ways to start, one standard of delivery.</h2>
+    </div>
+    <div class="model-grid">
+      <div class="model">
+        <svg viewBox="0 0 40 40" fill="none"><circle cx="15" cy="15" r="6" stroke="currentColor" stroke-width="2.2"/><path d="M5 33c0-5.5 4.5-10 10-10s10 4.5 10 10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M27 12a5 5 0 0 1 0 9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+        <h4>Training</h4>
+        <p>A standalone programme for a team or delegation, scoped to role and delivered on site or remotely.</p>
+        <ul>
+          <li>Needs assessment &amp; cohort mapping</li>
+          <li>Custom curriculum design</li>
+          <li>On-site or remote delivery</li>
+          <li>Post-programme refreshers</li>
+        </ul>
+      </div>
+      <div class="model">
+        <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="14" stroke="currentColor" stroke-width="2.2"/><path d="M25 15l-3.5 8.5L13 27l3.5-8.5L25 15z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg>
+        <h4>Advisory</h4>
+        <p>A defined engagement to assess, architect or de-risk a specific part of your technology estate.</p>
+        <ul>
+          <li>Current-state audit</li>
+          <li>Target architecture &amp; roadmap</li>
+          <li>Security &amp; compliance review</li>
+          <li>Vendor and platform selection</li>
+        </ul>
+      </div>
+      <div class="model">
+        <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="5" stroke="currentColor" stroke-width="2.2"/><path d="M20 6v5M20 29v5M6 20h5M29 20h5M10.2 10.2l3.5 3.5M26.3 26.3l3.5 3.5M29.8 10.2l-3.5 3.5M13.7 26.3l-3.5 3.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+        <h4>Delivery</h4>
+        <p>Full implementation of infrastructure, platforms or systems, with training run in parallel.</p>
+        <ul>
+          <li>Infrastructure &amp; cloud build</li>
+          <li>Software &amp; systems development</li>
+          <li>POS, ERP &amp; cash register rollout</li>
+          <li>Managed support after launch</li>
+        </ul>
+      </div>
+    </div>
+    <p class="model-foot">Every engagement — whichever model it starts as — ends the same way: your team able to run it without us.</p>
+  </div>
+</section>
+
+<!-- COVERAGE -->
+<section class="section" id="coverage">
+  <div class="wrap">
+    <div class="coverage-grid">
+      <div>
+        <div class="section-head" style="margin-bottom:26px;">
+          <div class="eyebrow"><span class="dot"></span>Where we work</div>
+          <h2>Anchored in Dubai. Active across two regions.</h2>
+          <p>We run engagements from a UAE base while maintaining delivery relationships across African markets, bringing the same standard of governance to both regions.</p>
+        </div>
+      </div>
+      <div>
+        <div class="region-card">
+          <div class="rtitle"><h4>United Arab Emirates</h4><span class="count">Home base</span></div>
+          <p>Headquartered in Dubai, serving clients across the Emirates in banking, government and enterprise sectors.</p>
+          <div class="country-list"><span>Dubai</span><span>Abu Dhabi</span><span>Sharjah</span></div>
+        </div>
+        <div class="region-card">
+          <div class="rtitle"><h4>Africa</h4><span class="count">Delivery reach</span></div>
+          <p>Corporate training and digital transformation engagements delivered on site and remotely across the continent.</p>
+          <div class="country-list"><span>Ethiopia</span><span>Djibouti</span><span>South Africa</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTORS -->
+<section class="section tight" id="sectors" style="background:var(--paper-2);">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow"><span class="dot"></span>Who we serve</div>
+      <h2>Built for regulated, high stakes environments.</h2>
+    </div>
+    <div class="sector-grid">
+      <div class="sector-item"><h5>Banking &amp; Finance</h5><span>Digital banking, payments, compliance</span></div>
+      <div class="sector-item"><h5>Government</h5><span>Public sector digital services</span></div>
+      <div class="sector-item"><h5>Energy &amp; Utilities</h5><span>Infrastructure &amp; OT modernisation</span></div>
+      <div class="sector-item"><h5>Telecommunications</h5><span>Network &amp; systems advisory</span></div>
+      <div class="sector-item"><h5>Insurance</h5><span>Process automation &amp; risk</span></div>
+      <div class="sector-item"><h5>Logistics &amp; Trade</h5><span>Systems integration</span></div>
+      <div class="sector-item"><h5>Education</h5><span>Digital skills programmes</span></div>
+      <div class="sector-item"><h5>Enterprise &amp; SME</h5><span>Complete transformation</span></div>
+    </div>
+    <p class="note">Scenarios, terminology, regulatory references and case work are rewritten for the sector in the room. A cybersecurity session for a bank is not the session a logistics operator receives.</p>
+  </div>
+</section>
+
+<!-- DOWNLOADS -->
+<section class="section tight downloads" id="downloads">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow"><span class="dot"></span>Documents</div>
+      <h2>Take the detail with you.</h2>
+      <p>The full company brochure and the training catalogue, including programme modules, learning outcomes and our ISO 9001:2015 certification detail.</p>
+    </div>
+    <div class="dl-grid">
+      <a class="dl-card" href="downloads/Infinite_Icon_Technology_Company_Brochure_2026.pdf" download>
+        <div class="dl-top">
+          <svg class="doc-icon" viewBox="0 0 40 40" fill="none"><path d="M23 5H11a2 2 0 0 0-2 2v26a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V13L23 5z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M23 5v8h8" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg>
+          <span class="dl-meta">PDF · Edition 2026</span>
+        </div>
+        <h4>Company Brochure</h4>
+        <p>Who we are, our operating principles, both practice areas, the four-stage method and how engagements are structured.</p>
+        <span class="dl-btn">
+          Download brochure
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 4v12M6 12l6 6 6-6M5 20h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+      </a>
+      <a class="dl-card" href="downloads/Infinite_Icon_Corporate_Training_Catalogue_2026.pdf" download>
+        <div class="dl-top">
+          <svg class="doc-icon" viewBox="0 0 40 40" fill="none"><path d="M23 5H11a2 2 0 0 0-2 2v26a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V13L23 5z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M23 5v8h8" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg>
+          <span class="dl-meta">PDF · Six programmes</span>
+        </div>
+        <h4>Corporate Training Catalogue</h4>
+        <p>Every programme in detail — audience, level, modules and outcomes — plus pathways, sector tailoring and the ISO 9001:2015 quality system.</p>
+        <span class="dl-btn">
+          Download catalogue
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 4v12M6 12l6 6 6-6M5 20h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+      </a>
+      <a class="dl-card" href="downloads/Infinite_Icon_ISO_9001_Certificate.pdf" download>
+        <div class="dl-top">
+          <svg class="doc-icon" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="16" r="9" stroke="currentColor" stroke-width="2.2"/><path d="M14 24l-3 11 9-4 9 4-3-11" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg>
+          <span class="dl-meta">PDF · Certificate</span>
+        </div>
+        <h4>ISO 9001:2015 Certificate</h4>
+        <p>The certificate of registration issued by Veritas System Quality Certificates Issuing LLC, accredited by EIAC. Certificate No. VSQC099-421263839.</p>
+        <span class="dl-btn">
+          Download certificate
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 4v12M6 12l6 6 6-6M5 20h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="cta-banner">
+  <div class="cta-glow" aria-hidden="true"></div>
+  <svg class="cta-mark" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M18.6 6.62c-1.44 0-2.8.56-3.77 1.53L12 10.66l-1.52 1.34.01.01-2.7 2.39c-.64.64-1.49.99-2.4.99-1.87 0-3.39-1.51-3.39-3.38S3.53 8.62 5.4 8.62c.91 0 1.76.35 2.44 1.03l1.13 1.01 1.51-1.34L9.22 8.2C8.2 7.18 6.84 6.62 5.4 6.62c-2.98 0-5.4 2.42-5.4 5.4s2.42 5.4 5.4 5.4c1.44 0 2.8-.56 3.77-1.53l2.83-2.53.01.01L13.52 12h-.01l2.69-2.4c.64-.64 1.49-.99 2.4-.99 1.87 0 3.39 1.51 3.39 3.38s-1.52 3.39-3.39 3.39c-.9 0-1.76-.35-2.44-1.03l-1.14-1.01-1.51 1.34 1.27 1.12c1.02 1.01 2.37 1.57 3.82 1.57 2.98 0 5.4-2.42 5.4-5.4s-2.42-5.37-5.4-5.37z"/>
+  </svg>
+  <div class="wrap cta-inner">
+    <div class="cta-copy">
+      <div class="eyebrow"><span class="dot" style="background:var(--sand-light);box-shadow:0 0 0 4px rgba(200,155,92,0.18);"></span>Start the conversation</div>
+      <h2>Ready to build the capability behind your next transformation?</h2>
+      <p>Tell us about your training needs or your technology roadmap, and our team will reply directly. We typically respond within one business day.</p>
+    </div>
+    <a href="mailto:infinite@infiniteicon.tech" class="btn-primary cta-button">
+      Let's Get Started
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="eyebrow"><span class="dot" style="background:var(--teal-light);"></span>Start a conversation</div>
+        <h3>Tell us who needs training, and what changes if they get it.</h3>
+        <p style="color:rgba(242,236,222,0.65);font-size:15px;">Send us the roles, the cohort sizes and the outcome you are trying to reach. We will return a scoped programme, a sequencing plan and a cost — normally within one business day.</p>
+        <a href="mailto:infinite@infiniteicon.tech" class="email-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M3 6h18v12H3z" stroke="currentColor" stroke-width="1.8"/><path d="M3 7l9 6 9-6" stroke="currentColor" stroke-width="1.8"/></svg>
+          infinite@infiniteicon.tech
+        </a>
+        <div class="contact-meta">
+          <span>We typically respond within one business day.</span>
+        </div>
+      </div>
+      <div>
+        <div class="contact-list">
+          <div class="row"><span>Headquarters</span><span>Dubai, United Arab Emirates</span></div>
+          <div class="row"><span>Regions served</span><span>UAE &amp; Africa</span></div>
+          <div class="row"><span>Email</span><span>infinite@infiniteicon.tech</span></div>
+          <div class="row"><span>Engagement types</span><span>Training · Advisory · Delivery</span></div>
+          <div class="row"><span>Founded</span><span>2022</span></div>
+          <div class="row"><span>Quality system</span><span>ISO 9001:2015 certified</span></div>
+          <div class="row"><span>Certificate no.</span><span>VSQC099-421263839</span></div>
+          <div class="row"><span>Cohort size</span><span>Typically 8 to 16 delegates</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#top" class="brand">
+          <svg class="brand-mark" viewBox="0 0 24 24">
+            <path fill="#F2ECDE" d="M18.6 6.62c-1.44 0-2.8.56-3.77 1.53L12 10.66l-1.52 1.34.01.01-2.7 2.39c-.64.64-1.49.99-2.4.99-1.87 0-3.39-1.51-3.39-3.38S3.53 8.62 5.4 8.62c.91 0 1.76.35 2.44 1.03l1.13 1.01 1.51-1.34L9.22 8.2C8.2 7.18 6.84 6.62 5.4 6.62c-2.98 0-5.4 2.42-5.4 5.4s2.42 5.4 5.4 5.4c1.44 0 2.8-.56 3.77-1.53l2.83-2.53.01.01L13.52 12h-.01l2.69-2.4c.64-.64 1.49-.99 2.4-.99 1.87 0 3.39 1.51 3.39 3.38s-1.52 3.39-3.39 3.39c-.9 0-1.76-.35-2.44-1.03l-1.14-1.01-1.51 1.34 1.27 1.12c1.02 1.01 2.37 1.57 3.82 1.57 2.98 0 5.4-2.42 5.4-5.4s-2.42-5.37-5.4-5.37z"/>
+          </svg>
+          <span class="brand-text"><span class="name">INFINITE ICON</span><span class="sub">Technology</span></span>
+        </a>
+        <p>IT consultancy headquartered in Dubai, delivering corporate training and digital transformation across the UAE and Africa under an ISO 9001:2015 certified quality management system.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Navigate</h5>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#quality">Quality</a>
+        <a href="#training">Training</a>
+        <a href="#approach">Approach</a>
+        <a href="#coverage">Coverage</a>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <span>Corporate Training</span>
+        <span>Cybersecurity &amp; Risk Advisory</span>
+        <span>IT Infrastructure &amp; Cloud</span>
+        <span>POS, ERP &amp; Cash Registers</span>
+        <span>Managed Services</span>
+      </div>
+      <div class="footer-col">
+        <h5>Documents</h5>
+        <a href="downloads/Infinite_Icon_Technology_Company_Brochure_2026.pdf" download>Company Brochure 2026</a>
+        <a href="downloads/Infinite_Icon_Corporate_Training_Catalogue_2026.pdf" download>Training Catalogue 2026</a>
+        <a href="downloads/Infinite_Icon_ISO_9001_Certificate.pdf" download>ISO 9001:2015 Certificate</a>
+        <a href="mailto:infinite@infiniteicon.tech">infinite@infiniteicon.tech</a>
+        <span>Dubai, UAE</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Infinite Icon Technology LLC. All rights reserved.</span>
+      <span>Quality management system certified to ISO 9001:2015 · Dubai, United Arab Emirates</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function openLightbox(src){
+    var lb = document.getElementById('lightbox');
+    var img = document.getElementById('lightbox-img');
+    img.src = src;
+    lb.classList.add('open');
+  }
+  function closeLightbox(){
+    document.getElementById('lightbox').classList.remove('open');
+  }
+</script>
+</body>
+</html>
